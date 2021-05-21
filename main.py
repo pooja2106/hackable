@@ -18,7 +18,7 @@ def restock():
 
 #API routes
 @app.route('/api/v1.0/storeLoginAPI/', methods=['POST'])
-def loginAPI():
+def loginAPI(request):
     if request.method == 'POST':
         uname,pword = (request.json['username'],request.json['password'])
         g.db = connect_db()

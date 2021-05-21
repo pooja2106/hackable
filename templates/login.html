@@ -4,17 +4,42 @@
 
 {% block content %}
 
-<div id="content">
+<style>
+	body {
+	background-image: url('static/store.jpg');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.my_div{
+	background-color: aliceblue;	
+	border: 1px solid black;
+	opacity: 0.9;
+	
+}
+</style>
+
+<div id="content" class = "my_div">
 
 <br><br>
 
-<h1>Welcome To BasicStore Online</h1>
-<h2>Login Below</h2><br>
+<h1>Welcome To Namastey Online Store</h1>
+<h2>Unprotected Login</h2><br>
 
 <form action="?" method="POST" onsubmit="login();return false;">
-	Username: <input type="text" id="uname" value=""/>
-  Password: <input type="password" id="passw" value=""/>
-	<input class="button" type="submit" value="Login" />
+	Username: <input  class="mr-sm-2" type="text" id="uname" value=""/>
+  Password: <input  class="mr-sm-2" type="password" id="passw" value=""/>
+	<input class="btn btn-primary btn-dark" type="submit" value="Login" />
+</form>
+
+<br><br>
+<h2>Protected Login</h2><br>
+
+<form action="?" method="POST" onsubmit="login2();return false;">
+	<!-- Username: <input  class="mr-sm-2" type="text" id="uname1" value=""/>
+  Password: <input  class="mr-sm-2" type="password" id="passw1" value=""/> -->
+	<input class="btn btn-primary btn-dark" type="submit" value="Login" />
 </form>
 
 <br><br>
